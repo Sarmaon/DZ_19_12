@@ -3,17 +3,18 @@
 
 Console.WriteLine("Введите число ");
 int number = Convert.ToInt32(Console.ReadLine());
-
-if (number > 99)
-
-    number = number % 10;
-    Console.Write("Третья цифра числа = ");
-    Console.Write(number);
-
-while(number > 1000)
 {
-    number = number / 10 % 100;
-    Console.WriteLine("Третьей цифры нет");
+    if (number > 99)
+    {
+        {
+            while (number > 999)
+                number = number / 10;
+        }
+        number = number % 10;
+        Console.Write($"Третья цифра числа = {number}");
+    }
+  else
+        Console.WriteLine("Третьей цифры нет");
 }
 
 
